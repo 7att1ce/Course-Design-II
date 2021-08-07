@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfLearn.Admin_Panel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        xmlns:local="clr-namespace:WpfLearn"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"
+        Title="Admin_Panel" Height="469" Width="970">
+    <Grid>
+        <Button Content="退出登录" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click_Log_Out"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="305" Margin="10,48,0,0" VerticalAlignment="Top" Width="316"/>
+        <TextBlock HorizontalAlignment="Left" Margin="125,26,0,0" Text="客户账户管理面板" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="查询所有账户" Margin="15,51,0,0" VerticalAlignment="Top" Click="Button_Click_Search_All_Client"/>
+        <Button Content="查询账户" Margin="247,52,0,0" VerticalAlignment="Top" Click="Button_Click_Search_Client"/>
+        <TextBox Name="Client_Search" HorizontalAlignment="Left" Margin="122,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Line X1="10" Y1="86" X2="326" Y2="86" Stroke="Gray"/>
+        <TextBox Name="Create_Client_Phone_Number" HorizontalAlignment="Left" Margin="78,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Create_Client_Password" HorizontalAlignment="Left" Margin="78,127,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Create_Client_Password_Check" HorizontalAlignment="Left" Margin="78,164,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,136,0,0" Text="密码:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,172,0,0" Text="密码确认:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,98,0,0" Text="手机号:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="创建用户" Margin="225,90,0,0" VerticalAlignment="Top" Click="Button_Click_Create_Client"/>
+        <Line X1="10" Y1="200" X2="326" Y2="200" Stroke="Gray"/>
+        <TextBox Name="Update_Client_Phone_Number" HorizontalAlignment="Left" Margin="78,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Update_Client_Password" HorizontalAlignment="Left" Margin="78,241,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Update_Client_Password_Check" HorizontalAlignment="Left" Margin="78,278,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,250,0,0" Text="新密码:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,286,0,0" Text="新密码确认:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,212,0,0" Text="手机号:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="修改用户" Margin="225,205,0,0" VerticalAlignment="Top" Click="Button_Click_Update_Client"/>
+        <Line X1="10" Y1="314" X2="326" Y2="314" Stroke="Gray"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,327,0,0" Text="手机号:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Delete_Client_Phone_Number" HorizontalAlignment="Left" Margin="78,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="删除用户" Margin="225,320,0,0" VerticalAlignment="Top" Click="Button_Click_Delete_Client"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="305" Margin="330,48,0,0" VerticalAlignment="Top" Width="316"/>
+        <TextBlock HorizontalAlignment="Left" Margin="434,26,0,0" Text="收费员账户管理面板" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="查询所有账户" Margin="335,51,0,0" VerticalAlignment="Top" Click="Button_Click_Search_All_Toll"/>
+        <Button Content="查询账户" Margin="567,52,0,0" VerticalAlignment="Top" Click="Button_Click_Search_Toll"/>
+        <TextBox Name="Toll_Search" HorizontalAlignment="Left" Margin="442,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Line X1="330" Y1="86" X2="646" Y2="86" Stroke="Gray"/>
+        <TextBox Name="Create_Toll_Phone_Number" HorizontalAlignment="Left" Margin="398,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Create_Toll_Password" HorizontalAlignment="Left" Margin="397,127,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Create_Toll_Password_Check" HorizontalAlignment="Left" Margin="398,164,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,136,0,0" Text="密码:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,172,0,0" Text="密码确认:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,98,0,0" Text="用户名:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="创建用户" Margin="545,90,0,0" VerticalAlignment="Top" Click="Button_Click_Create_Toll"/>
+        <Line X1="330" Y1="200" X2="646" Y2="200" Stroke="Gray"/>
+        <TextBox Name="Update_Toll_Phone_Number" HorizontalAlignment="Left" Margin="398,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Update_Toll_Password" HorizontalAlignment="Left" Margin="398,241,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="Update_Toll_Password_Check" HorizontalAlignment="Left" Margin="398,278,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,250,0,0" Text="新密码:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,286,0,0" Text="新密码确认:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,212,0,0" Text="用户名:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="修改用户" Margin="545,205,0,0" VerticalAlignment="Top" Click="Button_Click_Update_Toll"/>
+        <Line X1="330" Y1="314" X2="646" Y2="314" Stroke="Gray"/>
+        <TextBlock HorizontalAlignment="Left" Margin="335,327,0,0" Text="用户名:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="Delete_Toll_Phone_Number" HorizontalAlignment="Left" Margin="398,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="删除用户" Margin="545,320,0,0" VerticalAlignment="Top" Click="Button_Click_Delete_Toll"/>
+        <TextBlock Name="Result" HorizontalAlignment="Left" Height="343" Margin="651,10,0,0" Text="查询结果" TextWrapping="Wrap" VerticalAlignment="Top" Width="279"/>
+        <Button Content="客户信息备份" Margin="10,358,0,0" VerticalAlignment="Top" Click="Button_Click_Backup_Client"/>
+        <Button Content="收费员信息备份" Margin="117,358,0,0" VerticalAlignment="Top" Click="Button_Click_Backup_TollCollector"/>
+        <Button Content="收费记录备份" Margin="238,358,0,0" VerticalAlignment="Top" Click="Button_Click_Backup_Toll"/>
+        <Button Content="全部备份" Margin="345,358,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="全部恢复" Margin="424,358,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfLearn.Client_Panel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        xmlns:local="clr-namespace:WpfLearn"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"
+        Title="Client_Panel" Height="450" Width="800">
+    <Grid>
+        <Button Content="退出登录" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click_Log_Out"/>
+        <TextBlock HorizontalAlignment="Left" Margin="91,15,0,0" Text="用户:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock Name="PhoneNumber" HorizontalAlignment="Left" Margin="132,15,0,0" Text="NULL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="240,15,0,0" Text="账户余额:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock Name="Balance" HorizontalAlignment="Left" Margin="313,15,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="刷新余额" Margin="400,10,0,0" VerticalAlignment="Top" Click="Button_Click_Flush_Balance"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="91" Margin="10,46,0,0" VerticalAlignment="Top" Width="163"/>
+        <TextBox Name="Payment" HorizontalAlignment="Left" Margin="22,58,0,0" Text="请输入充值金额" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" LostFocus="TextBox_LostFocus_Payment" GotFocus="TextBox_GotFocus_Payment"/>
+        <Button Content="充值缴费" Margin="55,95,0,0" VerticalAlignment="Top" Click="Button_Click_Pay"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="245" Margin="10,153,0,0" VerticalAlignment="Top" Width="390"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,166,0,0" Text="查询账单记录" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,197,0,0" Text="开始日期:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,233,0,0" Text="截止日期:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox Name="StartDate" HorizontalAlignment="Left" Margin="95,191,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <TextBox Name="EndDate" HorizontalAlignment="Left" Margin="95,227,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,264,0,0" Text="日期格式详解:&#x0a;年(4位)月(2位)日(2位)时(2位)分(2位)秒(2位)&#x0a;例如:&#x0a;20201010221010: 2020年10月10日22时10分10秒&#x0a;20210606060606: 2021年6月6日6时6分6秒&#x0a;可以忽略时分秒" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="查询" Margin="313,211,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Search"/>
+        <TextBlock Name="Result" HorizontalAlignment="Left" Margin="419,62,0,0" Text="查询结果:&#x0a;开始日期:               截止日期:              收费:&#x0a;" TextWrapping="Wrap" VerticalAlignment="Top" Height="336" Width="371"/>
+
+    </Grid>
+</Window>

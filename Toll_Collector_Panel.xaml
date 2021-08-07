@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfLearn.Toll_Collector_Panel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        xmlns:local="clr-namespace:WpfLearn"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"
+        Title="Toll_Collector_Panel" Height="470" Width="864">
+    <Grid>
+        <Button Content="退出登录" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click_Log_Out"/>
+        <TextBlock HorizontalAlignment="Left" Margin="91,15,0,0" Text="用户:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock Name="UserID" HorizontalAlignment="Left" Margin="132,15,0,0" Text="NULL" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="100" Margin="10,46,0,0" VerticalAlignment="Top" Width="405"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,52,0,0" Text="用户余额查询及修改" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,80,0,0" Text="手机号:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,117,0,0" Text="修改的余额:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="PhoneNumber" HorizontalAlignment="Left" Margin="84,72,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Balance" HorizontalAlignment="Left" Margin="84,109,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="查询" Margin="209,72,0,0" VerticalAlignment="Top" Click="Button_Click_Balance_Search"/>
+        <Button Content="修改" Margin="209,110,0,0" VerticalAlignment="Top" Click="Button_Click_Balance_change"/>
+        <TextBlock Name="BalanceResult" HorizontalAlignment="Left" Margin="260,52,0,0" Text="查询结果:&#x0a;手机号:            余额:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Border BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="274" Margin="10,151,0,0" VerticalAlignment="Top" Width="405"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,157,0,0" Text="账单记录查询, 添加及修改" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TollPhoneNumber" HorizontalAlignment="Left" Margin="84,177,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TollCharge" HorizontalAlignment="Left" Margin="84,214,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TollEndDate" HorizontalAlignment="Left" Margin="280,214,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TollStartDate" HorizontalAlignment="Left" Margin="280,177,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,185,0,0" Text="手机号:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="215,185,0,0" Text="开始日期:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="215,222,0,0" Text="截止日期:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,222,0,0" Text="收费:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="查询" Margin="15,251,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Search"/>
+        <TextBlock Name="TollResult" HorizontalAlignment="Left" Margin="420,47,0,0" Text="查询结果&#x0a;手机号:            开始日期:              截止日期:              收费:" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Height="378"/>
+        <Button Content="添加" Margin="66,251,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Add"/>
+        <Button Content="删除" Margin="117,251,0,0" VerticalAlignment="Top" Click="Button_CLick_Toll_Delete"/>
+        <Button Content="修改开始日期" Margin="168,251,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Update_Start_Date"/>
+        <Button Content="修改截止日期" Margin="275,251,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Update_End_Date"/>
+        <Button Content="修改收费" Margin="303,287,0,0" VerticalAlignment="Top" Click="Button_Click_Toll_Update_Cost"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,288,0,0" Text="日期格式详解:&#x0a;年(4位)月(2位)日(2位)时(2位)分(2位)秒(2位)&#x0a;例如:&#x0a;20201010221010: 2020年10月10日22时10分10秒&#x0a;20210606060606: 2021年6月6日6时6分6秒&#x0a;可以忽略时分秒" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="12"/>
+        <Button Content="导出所有收费记录" Margin="275,379,0,0" VerticalAlignment="Top" Click="Button_Click_Export"/>
+        <Button Content="导出客户记录" Margin="168,379,0,0" VerticalAlignment="Top" Click="Button_Click_Export_Client"/>
+    </Grid>
+</Window>
